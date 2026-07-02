@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>TrendOffice Global Sourcing</title>
+  <meta name="description" content="TrendOffice Global Sourcing - İstanbul merkezli tekstil mümessil ofisi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Sora:wght@500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="cursor-stitch-layer" id="cursorStitchLayer" aria-hidden="true"></div>
+  <div class="cursor-walker" id="cursorWalker" aria-hidden="true">
+    <img src="cursor-walker.png" alt="" width="48" height="57">
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <svg viewBox="0 0 200 60" class="loader-mark">
+      <path id="loaderThread" d="M4 30 C 40 6, 60 54, 100 30 S 160 6, 196 30" />
+    </svg>
+  </div>
+
+  <div class="progress-rail" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="TrendOffice ana sayfa">
+      <img src="trendoffice-logo.png" alt="TrendOffice Global Sourcing logo">
+    </a>
+    <nav aria-label="Ana menü">
+      <a href="#about" data-i18n="nav_about">Hakkımızda</a>
+      <a href="#services" data-i18n="nav_services">Hizmetler</a>
+      <a href="#process" data-i18n="nav_process">Süreç</a>
+      <a href="#network" data-i18n="nav_network">Harita</a>
+      <a href="#compare" data-i18n="nav_compare">Karşılaştır</a>
+      <a href="#fit-check" data-i18n="nav_fit">Mini test</a>
+      <a href="#contact" data-i18n="nav_contact">İletişim</a>
+    </nav>
+    <div class="top-actions">
+      <div class="lang" aria-label="Dil seçimi">
+        <button class="lang-trigger" type="button" id="langTrigger" aria-expanded="false">
+          <span class="lang-flag" id="langFlagActive">🇹🇷</span>
+          <span id="langCodeActive">TR</span>
+          <svg width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1l3.5 3.5L8 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lang-menu" id="langMenu">
+          <button data-lang="tr" type="button" class="active"><span class="lang-flag">🇹🇷</span>Türkçe</button>
+          <button data-lang="en" type="button"><span class="lang-flag">🇬🇧</span>English</button>
+          <button data-lang="de" type="button"><span class="lang-flag">🇩🇪</span>Deutsch</button>
+          <button data-lang="fr" type="button"><span class="lang-flag">🇫🇷</span>Français</button>
+          <button data-lang="es" type="button"><span class="lang-flag">🇪🇸</span>Español</button>
+        </div>
+      </div>
+      <a class="nav-cta magnetic" href="#fit-check" data-i18n="nav_cta">Uyum testi</a>
+    </div>
+  </header>
+
+  <div class="intro-overlay" id="introOverlay" aria-label="Giriş animasyonu">
+    <video class="intro-video" id="introVideo" muted playsinline autoplay preload="auto"
+           poster="intro-last-frame.jpg">
+      <source src="intro.webm" type="video/webm">
+      <source src="intro.mp4" type="video/mp4">
+    </video>
+    <button class="intro-skip" id="introSkip" type="button" aria-label="Girişi atla">
+      <span data-i18n="intro_skip">Atla</span>
+    </button>
+  </div>
+
+  <main id="home">
+
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="thread-svg" viewBox="0 0 1600 1000" preserveAspectRatio="none">
+          <path id="heroThread" d="M-50 760 C 220 700, 320 880, 560 800 S 900 620, 1180 720 S 1500 860, 1650 760" />
+        </svg>
+      </div>
+      <div class="hero-copy reveal-stack">
+        <p class="eyebrow reveal-line" data-i18n="hero_eyebrow">İstanbul merkezli global sourcing ofisi</p>
+        <h1>
+          <span class="reveal-line" data-i18n="hero_line1">Koleksiyonunuz</span>
+          <span class="reveal-line gradient-text" data-i18n="hero_line2">doğru üretim akışına</span>
+          <span class="reveal-line" data-i18n="hero_line3">bağlansın.</span>
+        </h1>
+        <p class="lead reveal-line" data-i18n="hero_lead">TrendOffice, markanızın Türkiye’deki üretici seçimi, numune geliştirme, kalite kontrol ve teslimat sürecini tek merkezden yönetir.</p>
+        <div class="hero-actions reveal-line">
+          <a class="btn primary magnetic" href="#fit-check" data-i18n="cta_fit">Mini testi başlat</a>
+          <a class="btn secondary magnetic" href="#process" data-i18n="cta_process">Animasyonlu süreci gör</a>
+        </div>
+        <div class="hero-stats reveal-line">
+          <div class="hero-stat"><strong data-count="15">0</strong><span data-i18n="stat_factories">üretici fabrika</span></div>
+          <div class="hero-stat"><strong data-count="4">0</strong><span data-i18n="stat_markets">aktif pazar</span></div>
+        </div>
+        <div class="hero-flow-strip reveal-line">
+          <div class="flow-strip-item"><b>01</b><span data-i18n="flow_sampling">Numune</span></div>
+          <div class="flow-strip-sep"></div>
+          <div class="flow-strip-item"><b>02</b><span data-i18n="flow_production">Üretim</span></div>
+          <div class="flow-strip-sep"></div>
+          <div class="flow-strip-item"><b>03</b><span data-i18n="flow_quality">Kalite</span></div>
+          <div class="flow-strip-sep"></div>
+          <div class="flow-strip-item"><b>04</b><span data-i18n="flow_delivery">Teslimat</span></div>
+        </div>
+      </div>
+      <div class="hero-showcase">
+        <div class="hero-system hero-logo-panel">
+          <img src="trendoffice-logo.png" alt="TrendOffice" class="hero-logo-display">
+        </div>
+        <div class="floating-chips">
+          <div class="floating-chip chip-one"><i class="chip-dot dot-purple"></i><span data-i18n="chip_moq">Low MOQ</span></div>
+          <div class="floating-chip chip-two"><i class="chip-dot dot-cyan"></i><span data-i18n="chip_quality">Quality Control</span></div>
+          <div class="floating-chip chip-three"><i class="chip-dot dot-lime"></i><span data-i18n="chip_fast">Fast Response</span></div>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span></span>Scroll</div>
+    </section>
+
+    <section class="logo-belt panel-watch" aria-label="Çalıştığımız kategoriler">
+      <div class="belt-track">
+        <span>Örme</span><span>Denim</span><span>Dokuma</span><span>Triko</span><span>Outdoor</span>
+        <span>Sweat &amp; Fleece</span><span>Aksesuar</span><span>Örme</span><span>Denim</span><span>Dokuma</span>
+        <span>Triko</span><span>Outdoor</span><span>Sweat &amp; Fleece</span><span>Aksesuar</span>
+      </div>
+    </section>
+
+    <section id="about" class="about panel-watch">
+      <div class="section-kicker">
+        <p class="eyebrow" data-i18n="about_eyebrow">Premium sourcing deneyimi</p>
+        <h2 data-i18n="about_title">Üretim süreciniz ekranda gördüğünüz kadar net, sahada hissettiğiniz kadar kontrollü ilerler.</h2>
+      </div>
+      <div class="about-grid">
+        <article class="tilt-card">
+          <strong>01</strong>
+          <h3 data-i18n="about_card1_title">Doğru üretici</h3>
+          <p data-i18n="about_card1_text">Kategori, adet, fiyat ve kalite beklentisine göre uygun fabrika ağına yönlendirme.</p>
+        </article>
+        <article class="tilt-card">
+          <strong>02</strong>
+          <h3 data-i18n="about_card2_title">Net iletişim</h3>
+          <p data-i18n="about_card2_text">Numune, revizyon, termin ve üretim aşamalarında tek profesyonel temas noktası.</p>
+        </article>
+        <article class="tilt-card">
+          <strong>03</strong>
+          <h3 data-i18n="about_card3_title">Görünür takip</h3>
+          <p data-i18n="about_card3_text">Riskleri erken gören, kalite ve sevkiyat adımlarını düzenli izleyen operasyon yapısı.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="services panel-watch">
+      <div class="service-strip">
+        <article class="tilt-card"><span class="service-icon">✦</span><h3 data-i18n="s1_title">Ürün çeşitliliği</h3><p data-i18n="s1_text">Örme, denim, dokuma ve triko üretimlerinde geniş üretici ağı.</p></article>
+        <article class="tilt-card"><span class="service-icon">MOQ</span><h3 data-i18n="s2_title">Düşük adetli üretim</h3><p data-i18n="s2_text">Az adetli üretim talepleri için uygun üretici eşleşmesi.</p></article>
+        <article class="tilt-card"><span class="service-icon">↗</span><h3 data-i18n="s3_title">Hızlı aksiyon</h3><p data-i18n="s3_text">Numune, fiyat ve termin süreçlerinde hızlı geri dönüş akışı.</p></article>
+        <article class="tilt-card"><span class="service-icon">✓</span><h3 data-i18n="s4_title">Güvenli teslim</h3><p data-i18n="s4_text">Kalite kontrol, paketleme ve kargo koordinasyonu.</p></article>
+      </div>
+    </section>
+
+    <section class="image-ribbon panel-watch" aria-label="Tekstil görsel galerisi">
+      <div class="ribbon-track">
+        <figure><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FcVTbHmsaK5VpgVjEw8twWh5VL/hf_20260627_205000_903aa432-f7c1-45ee-8b71-befeb7b772df.png" alt="Showroom" loading="lazy"><figcaption data-i18n="gallery1">Showroom</figcaption></figure>
+        <figure><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FcVTbHmsaK5VpgVjEw8twWh5VL/hf_20260627_205034_e7be4b9e-1c8c-4ff2-82fd-e3cfbb934c6b.png" alt="Kumaş seçimi" loading="lazy"><figcaption data-i18n="gallery2">Kumaş seçimi</figcaption></figure>
+        <figure><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FcVTbHmsaK5VpgVjEw8twWh5VL/hf_20260627_205056_831652e3-a35b-47d3-a945-c972f7c0ef07.png" alt="Koleksiyon" loading="lazy"><figcaption data-i18n="gallery3">Koleksiyon</figcaption></figure>
+        <figure><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FcVTbHmsaK5VpgVjEw8twWh5VL/hf_20260627_205120_e2e54589-2aab-4646-ba70-2aca952fa954.png" alt="Numune" loading="lazy"><figcaption data-i18n="gallery4">Numune</figcaption></figure>
+        <figure><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FcVTbHmsaK5VpgVjEw8twWh5VL/hf_20260627_205144_45c33197-ef27-4fc8-910c-ffcb03216eea.png" alt="Ürün dili" loading="lazy"><figcaption data-i18n="gallery5">Ürün dili</figcaption></figure>
+        <figure aria-hidden="true"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FcVTbHmsaK5VpgVjEw8twWh5VL/hf_20260627_205000_903aa432-f7c1-45ee-8b71-befeb7b772df.png" alt="" loading="lazy"><figcaption>Showroom</figcaption></figure>
+        <figure aria-hidden="true"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FcVTbHmsaK5VpgVjEw8twWh5VL/hf_20260627_205034_e7be4b9e-1c8c-4ff2-82fd-e3cfbb934c6b.png" alt="" loading="lazy"><figcaption>Kumaş seçimi</figcaption></figure>
+        <figure aria-hidden="true"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FcVTbHmsaK5VpgVjEw8twWh5VL/hf_20260627_205056_831652e3-a35b-47d3-a945-c972f7c0ef07.png" alt="" loading="lazy"><figcaption>Koleksiyon</figcaption></figure>
+        <figure aria-hidden="true"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FcVTbHmsaK5VpgVjEw8twWh5VL/hf_20260627_205120_e2e54589-2aab-4646-ba70-2aca952fa954.png" alt="" loading="lazy"><figcaption>Numune</figcaption></figure>
+        <figure aria-hidden="true"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FcVTbHmsaK5VpgVjEw8twWh5VL/hf_20260627_205144_45c33197-ef27-4fc8-910c-ffcb03216eea.png" alt="" loading="lazy"><figcaption>Ürün dili</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="process" class="process panel-watch">
+      <div class="process-copy">
+        <p class="eyebrow" data-i18n="process_eyebrow">Kontrollü süreç</p>
+        <h2 data-i18n="process_title">Talepten teslimata kontrollü akış.</h2>
+        <p data-i18n="process_text">Talep, üretici, numune, üretim ve teslimat adımlarını tek bir operasyon hattında görünür hale getiriyoruz.</p>
+        <div class="mill-stat-card mill-stat-flash">
+          <strong data-i18n="mill_count">15</strong>
+          <div class="mill-stat-text">
+            <span data-i18n="mill_label">üretici fabrika ile aktif çalışma</span>
+            <div class="mill-breakdown">
+              <em class="fabric-chip" data-fabric="knit" data-i18n="mill_knit">7 Örme</em><em class="fabric-chip" data-fabric="woven" data-i18n="mill_woven">3 Dokuma</em><em class="fabric-chip" data-fabric="knitwear" data-i18n="mill_knitwear">3 Triko</em><em class="fabric-chip" data-fabric="denim" data-i18n="mill_denim">2 Denim</em>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="process-stage" aria-label="Animasyonlu üretim süreci">
+        <div class="stage-top">
+          <div class="stage-line"><span id="processProgress"></span></div>
+          <div class="stage-heading">
+            <b id="stageStepNum">01</b>
+            <h3 id="stageStepTitle" data-i18n="p1">Talep analizi</h3>
+          </div>
+        </div>
+
+        <div class="stage-visual stop-motion" id="stopMotion">
+          <div class="sm-frame frame-0 active">
+            <img src="process-images/process-1-request.jpg" alt="Talep analizi - kumaş ve renk seçimi" loading="lazy">
+          </div>
+          <div class="sm-frame frame-1">
+            <img src="process-images/process-2-matching.jpg" alt="Üretici eşleşmesi - fabrika veritabanı" loading="lazy">
+          </div>
+          <div class="sm-frame frame-2">
+            <img src="process-images/process-3-production.jpg" alt="Numune ve üretim - örme makinesi" loading="lazy">
+          </div>
+          <div class="sm-frame frame-3">
+            <img src="process-images/process-4-shipment.jpg" alt="Kontrol ve sevkiyat - son kalite kontrolü" loading="lazy">
+          </div>
+          <div class="sm-frame-counter"><span id="smCounter">01</span><i>/ 04</i></div>
+          <div class="sm-flash"></div>
+        </div>
+
+        <p class="stage-desc" id="stageStepDesc" data-i18n="p1t">Ürün grubu, hedef fiyat, adet, kalite ve teslim beklentisi netleştirilir.</p>
+
+        <div class="stage-meta-list" aria-hidden="true">
+          <span data-i18n="p1">Talep analizi</span>
+          <span data-i18n="p2">Üretici eşleşmesi</span>
+          <span data-i18n="p3">Numune ve üretim</span>
+          <span data-i18n="p4">Kontrol ve sevkiyat</span>
+          <span data-i18n="p1t">Ürün grubu, hedef fiyat, adet, kalite ve teslim beklentisi netleştirilir.</span>
+          <span data-i18n="p2t">Doğru kapasiteye ve kategoriye sahip üretici seçilir.</span>
+          <span data-i18n="p3t">Revizyonlar, onaylar, termin ve üretim akışı takip edilir.</span>
+          <span data-i18n="p4t">Son kalite kontrolü ve teslimat koordinasyonu tamamlanır.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey panel-watch" aria-label="Örnek numune yolculuğu">
+      <div class="journey-head">
+        <p class="eyebrow" data-i18n="journey_eyebrow">Şeffaf takip</p>
+        <h2 data-i18n="journey_title">Bizimle çalıştığınızda numuneniz böyle görünür.</h2>
+        <p class="journey-sub" data-i18n="journey_sub">Temsili bir takip — her adım gerçek zamanlı paylaşılır.</p>
+      </div>
+      <div class="journey-track" id="journeyTrack">
+        <div class="journey-line"><span id="journeyProgress"></span></div>
+        <div class="journey-steps">
+          <div class="journey-step" data-step="0">
+            <i></i><b data-i18n="j1">Talep alındı</b><span data-i18n="j1d">İstanbul masası</span>
+          </div>
+          <div class="journey-step" data-step="1">
+            <i></i><b data-i18n="j2">Üretici eşleşti</b><span data-i18n="j2d">Kapasite onayı</span>
+          </div>
+          <div class="journey-step" data-step="2">
+            <i></i><b data-i18n="j3">Numune yolda</b><span data-i18n="j3d">Kargo takibi paylaşıldı</span>
+          </div>
+          <div class="journey-step" data-step="3">
+            <i></i><b data-i18n="j4">Onay</b><span data-i18n="j4d">Revizyon kapandı</span>
+          </div>
+          <div class="journey-step" data-step="4">
+            <i></i><b data-i18n="j5">Üretim</b><span data-i18n="j5d">Termin takvimde</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="network" class="network panel-watch">
+      <div class="network-copy">
+        <p class="eyebrow" data-i18n="network_eyebrow">Gerçek sınırlarla global ağ</p>
+        <h2 data-i18n="network_title">İstanbul'dan Avrupa, Birleşik Krallık ve Dubai pazarlarına canlı sourcing rotaları.</h2>
+      </div>
+      <div class="map-shell">
+        <div class="map-topline">
+          <span data-i18n="map_label">TrendOffice sourcing network</span>
+          <strong data-i18n="map_status">Live routes</strong>
+        </div>
+        <svg id="worldMap" viewBox="0 0 960 560" role="img" aria-label="TrendOffice gerçek ülke sınırları dünya haritası"></svg>
+        <div class="map-legend">
+          <button class="active" type="button" data-market="all" style="--c:#7a39b8">İstanbul Hub</button>
+          <button type="button" data-market="Greece" style="--c:#008fa3">Greece</button>
+          <button type="button" data-market="UK" style="--c:#00a9c0">UK</button>
+          <button type="button" data-market="France" style="--c:#8bc018">France</button>
+          <button type="button" data-market="Dubai" style="--c:#ffbe0b">Dubai</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="compare panel-watch">
+      <div class="compare-statement-wrap">
+        <p class="eyebrow" data-i18n="compare_eyebrow">Fark net</p>
+        <h2 class="compare-big" data-i18n="compare_title">Az markayla, çok dikkatle çalışırız.</h2>
+        <p class="compare-sub" data-i18n="compare_sub">Az ve özel seçilmiş markalarımızla, her birinin işini kendi işimiz gibi sahipleniriz.</p>
+      </div>
+    </section>
+
+    <section id="fit-check" class="fit-check panel-watch">
+      <div class="fit-copy">
+        <p class="eyebrow" data-i18n="fit_eyebrow">Mini müşteri testi</p>
+        <h2 data-i18n="fit_title">Üretim süreciniz sizi yavaşlatıyor mu?</h2>
+        <p data-i18n="fit_text">Birkaç soruya cevap verin; sonunda markanızın TrendOffice ile neden daha rahat ilerleyebileceğini görün.</p>
+      </div>
+      <div class="quiz-card">
+        <div class="quiz-progress"><span id="quizProgress"></span></div>
+        <h3 id="quizQuestion">Geç terminlerden sıkıldınız mı?</h3>
+        <div class="quiz-options">
+          <button type="button" data-score="2" data-i18n="quiz_yes">Evet, sık sık yaşıyoruz</button>
+          <button type="button" data-score="1" data-i18n="quiz_sometimes">Bazen oluyor</button>
+          <button type="button" data-score="0" data-i18n="quiz_no">Şimdilik kontrol altında</button>
+        </div>
+        <div class="quiz-result" id="quizResult" hidden>
+          <div class="complete-check" aria-hidden="true">✓</div>
+          <span class="complete-label" data-i18n="quiz_complete">Test tamamlandı</span>
+          <strong data-i18n="quiz_result_title">Doğru yerdesiniz.</strong>
+          <p data-i18n="quiz_result_text">Termin, numune, kalite ve üretici iletişimi sizin için zaman kaybına dönüşüyorsa TrendOffice bu yükü daha kontrollü ve görünür bir akışa taşır.</p>
+          <a class="btn primary" href="#contact" data-i18n="quiz_cta">Görüşme talep et</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact panel-watch">
+      <div class="contact-copy">
+        <p class="eyebrow" data-i18n="form_eyebrow">Daha fazla bilgi alın</p>
+        <h2 data-i18n="contact_title">Yeni koleksiyonunuz için doğru üretim partnerini birlikte bulalım.</h2>
+        <a class="mail magnetic" href="mailto:gfayat@trendoffice.com.tr">gfayat@trendoffice.com.tr</a>
+        <p data-i18n="contact_note">Talebinizi paylaştığınızda kategori, hedef adet ve teslim beklentinize göre en uygun yönlendirmeyi yaparız.</p>
+
+        <div class="desk-clock" id="deskClock" aria-live="polite">
+          <div class="desk-clock-status">
+            <i id="deskDot"></i>
+            <b id="deskStatusText" data-i18n="desk_open">Masa şu an aktif</b>
+          </div>
+          <div class="desk-clock-times">
+            <div class="desk-time">
+              <span data-i18n="desk_ist">İstanbul</span>
+              <strong id="deskTimeIst">--:--</strong>
+            </div>
+            <em class="desk-time-sep" aria-hidden="true"></em>
+            <div class="desk-time">
+              <span id="deskLocalLabel" data-i18n="desk_you">Sizde</span>
+              <strong id="deskTimeLocal">--:--</strong>
+            </div>
+          </div>
+          <p class="desk-clock-note" id="deskClockNote" data-i18n="desk_hours">Hafta içi 08:00–18:00 (GMT+3)</p>
+        </div>
+      </div>
+      <form class="info-form" action="https://formsubmit.co/gfayat@trendoffice.com.tr" method="POST">
+        <input type="hidden" name="_subject" value="TrendOffice Website - Yeni Bilgi Talebi">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <label><span data-i18n="f_brand">Marka adı</span><input name="brand_name" required placeholder="Brand / Company"></label>
+        <label><span data-i18n="f_person">Yetkili kişi</span><input name="contact_person" placeholder="Name Surname"></label>
+        <label><span data-i18n="f_email">E-posta</span><input name="email" type="email" required placeholder="name@company.com"></label>
+        <label><span data-i18n="f_phone">Telefon</span><input name="phone" type="tel" placeholder="+90 ..."></label>
+        <label class="full"><span data-i18n="f_interest">İlgilendiğiniz ürün grubu</span><select name="product_group"><option>Örme / Jersey</option><option>Denim</option><option>Dokuma / Woven</option><option>Triko / Knitwear</option><option>Multiple categories</option></select></label>
+        <label class="full"><span data-i18n="f_message">Mesajınız</span><textarea name="message" rows="5" placeholder="Collection details, target quantity, delivery expectations..."></textarea></label>
+        <button class="btn primary full magnetic" type="submit" data-i18n="f_submit">Formu gönder</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <span class="footer-logo"><img src="trendoffice-logo.png" alt="TrendOffice logo"></span>
+    <nav class="footer-nav" aria-label="Alt navigasyon">
+      <a href="#home" data-i18n="nav_about">Hakkında</a>
+      <a href="#process" data-i18n="nav_process">Süreç</a>
+      <a href="#network" data-i18n="nav_network">Ağ</a>
+      <a href="#fit-check" data-i18n="nav_fit">Hizmetler</a>
+      <a href="#contact" data-i18n="nav_contact">İletişim</a>
+    </nav>
+    <span class="footer-loc">İstanbul · Türkiye</span>
+    <a href="#home" class="back-top magnetic" aria-label="Yukarı dön">↑</a>
+  </footer>
+
+  <script src="vendor/d3.min.js"></script>
+  <script src="vendor/topojson-client.min.js"></script>
+  <script src="vendor/world-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
