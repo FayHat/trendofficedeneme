@@ -1,0 +1,197 @@
+/* Third revision (October 2026). Loaded after style.css and enhancements.css. */
+
+/* ---------- Hero: office photo with workroom card ---------- */
+.hero-media{position:relative;padding-left:15%}
+.hero-photo img{object-position:50% 50%}
+.hero-card{position:absolute;left:0;bottom:9%;width:36%;z-index:1;background:var(--paper);padding:8px 8px 11px;border-radius:2px;box-shadow:0 24px 46px -24px #29222585,0 2px 8px #2922251a;transform:rotate(-2.5deg)}
+.hero-card img{width:100%;height:auto;aspect-ratio:1/1.05;object-fit:cover;border-radius:1px}
+.hero-card span{display:block;margin-top:9px;font-size:12px;line-height:1.3;letter-spacing:.09em;text-transform:uppercase;color:var(--wine)}
+.hero-visual figcaption{margin-left:15%}
+.hero-visual figcaption small{font-size:12px}
+.hero .eyebrow{font-size:12px}
+.hero-stats span{font-size:12px}
+
+/* ---------- Client logos ---------- */
+.clients{display:grid;grid-template-columns:170px 1fr;align-items:center;gap:48px;padding-block:6px 64px}
+.clients-label{font-size:12px;line-height:1.55;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.client-logos{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:28px 40px;list-style:none;margin:0;padding:22px 0;border-block:1px solid var(--line)}
+.client-logos li{display:flex;align-items:center;justify-content:center}
+.client-logos img{display:block;width:auto;height:var(--logo-h,26px);opacity:.78;transition:opacity .2s}
+.client-logos li:hover img{opacity:1}
+.client-jaded-london{--logo-h:17px}
+.client-nawa{--logo-h:23px}
+.client-attrattivo{--logo-h:24px}
+.client-adl{--logo-h:28px}
+.client-ale{--logo-h:38px}
+.client-love-my-body{--logo-h:30px}
+
+/* ---------- Services ---------- */
+.service-chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:-22px 0 40px;padding:0}
+.service-chips li{border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:13px;line-height:1.4;background:var(--paper);color:var(--ink)}
+
+/* ---------- Contact & footer ---------- */
+.contact-phone{margin-top:4px}
+.contact-address{display:flex;justify-content:space-between;align-items:flex-end;gap:12px 24px;flex-wrap:wrap;margin-top:22px;font-size:14px;line-height:1.75;color:var(--ink)}
+.contact-address address{font-style:normal}
+.contact-address .text-link{font-size:13px;padding:6px 0}
+.contact-details>p{font-size:13px}
+.footer-meta{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.footer-inner p{font-size:12px}
+.footer-contact{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px;color:#c9b7ad}
+.footer-contact a:hover,.footer-contact .privacy-link:hover{color:#fff}
+.back-top{font-size:12px}
+
+/* ---------- Privacy ---------- */
+.privacy-link{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;cursor:pointer}
+.privacy-note p{font-size:12px}
+.privacy-dialog{width:min(580px,calc(100% - 32px));max-height:calc(100% - 48px);border:0;border-radius:6px;padding:0;background:var(--paper);color:var(--ink);box-shadow:0 30px 80px -30px #292225a6}
+.privacy-dialog::backdrop{background:#29222599}
+.privacy-inner{padding:34px 34px 28px}
+.privacy-inner .eyebrow{margin-bottom:12px}
+.privacy-inner h3{font-size:24px;line-height:1.3;margin-bottom:6px}
+.privacy-inner p:not(.eyebrow){font-size:14px;line-height:1.75;color:#4f4541;margin-top:12px}
+.privacy-inner .privacy-controller{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:20px}
+.privacy-actions{display:flex;justify-content:flex-end;margin-top:22px}
+
+/* ---------- Legibility: nothing below 12px ---------- */
+.eyebrow{font-size:12px}
+.map-caption,.map-legend button,.map-motion{font-size:12px}
+.focus-points span{font-size:12px}
+.field>small,.field>span>small{font-size:12px}
+.field input::placeholder,.field textarea::placeholder{font-size:13px}
+.step-body h4{font-size:11px}
+.brief-progress li span{font-size:12px}
+.review-list>div{font-size:13px}
+.recipient-line{font-size:12px}
+.material-mini{font-size:12px}
+.swatch-label{font-size:11px}
+.fabric-copy>p{font-size:14px}
+.fabric-copy h4{font-size:11px}
+.detail-list li{font-size:13px}
+.fabric-copy .text-link{font-size:13px}
+.relationship-label,.office-core .relationship-label{font-size:11px}
+.manufacturer-groups li>span{font-size:12px}
+.focus-section .eyebrow{font-size:12px}
+.form-step-count{font-size:12px}
+
+/* ---------- Map ---------- */
+#worldMap.is-compact .map-label[data-city="1"],#worldMap.is-compact .map-label[data-city="3"]{opacity:0;transition:opacity .2s}
+#worldMap.is-compact .map-label.is-highlighted{opacity:1}
+
+/* ---------- Header: nav text on the same scale as the rest of the row ---------- */
+.main-nav{gap:30px}
+.main-nav>a{font-size:15px}
+.header-cta{font-size:15px}
+.language-toggle{font-size:14px}
+
+/* ---------- Client logos: confidential brands ---------- */
+.client-more{flex-direction:column;align-items:flex-start!important;gap:7px}
+.client-redacted{display:flex;align-items:center;gap:8px}
+.client-redacted svg{width:15px;height:15px;fill:none;stroke:var(--wine);stroke-width:1.4;stroke-linejoin:round;flex-shrink:0}
+.client-redacted>span{display:grid;gap:4px}
+.client-redacted i{display:block;width:58px;height:8px;border-radius:1px;background:#292225;opacity:.7}
+.client-redacted i+i{width:34px;opacity:.45}
+.client-more-text{max-width:130px;font-size:12px;line-height:1.35;color:var(--muted)}
+
+/* ---------- Contact: email and phone respond like buttons ---------- */
+.contact-link{position:relative;isolation:isolate;transition:color .3s var(--ease)}
+.contact-link:before{content:'';position:absolute;inset:0 -14px;z-index:-1;border-radius:3px;background:#b8915f1f;transform:scaleX(0);transform-origin:left center;transition:transform .45s var(--ease)}
+.contact-link:after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left center;transition:transform .45s var(--ease)}
+.contact-text{display:inline-block;transform-origin:left center;transition:transform .35s var(--ease)}
+.contact-arrow{display:inline-block;transition:transform .35s var(--ease)}
+.contact-link:focus-visible{color:#94703f}
+.contact-link:focus-visible:before,.contact-link:focus-visible:after{transform:scaleX(1)}
+.contact-link:focus-visible .contact-text{transform:scale(1.06)}
+.contact-link:focus-visible .contact-arrow{transform:translate(3px,-3px) scale(1.15)}
+@media(hover:hover){
+  .contact-link:hover{color:#94703f}
+  .contact-link:hover:before,.contact-link:hover:after{transform:scaleX(1)}
+  .contact-link:hover .contact-text{transform:scale(1.06)}
+  .contact-link:hover .contact-arrow{transform:translate(3px,-3px) scale(1.15)}
+}
+.contact-link:active .contact-text{transform:scale(1.015);transition-duration:.08s}
+.contact-link:active .contact-arrow{transform:translate(0,0) scale(.92);transition-duration:.08s}
+.contact-link:active:before{background:#b8915f33;transition-duration:.08s}
+@media(prefers-reduced-motion:reduce){.contact-link:before,.contact-link:after,.contact-text,.contact-arrow{transition:none}}
+.footer-rights{opacity:.75}
+
+/* ---------- Copy email ---------- */
+.contact-row{display:flex;align-items:center;gap:16px;border-bottom:1px solid var(--line)}
+.contact-row .contact-email{flex:1;min-width:0;border-bottom:0}
+.copy-email{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;min-height:38px;padding:7px 14px;border:1px solid var(--line);border-radius:30px;background:var(--paper);color:var(--ink);font-size:13px;line-height:1;transition:border-color .2s,background .2s,color .2s,transform .12s}
+.copy-email svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.copy-email .copy-check{display:none}
+@media(hover:hover){.copy-email:hover{border-color:var(--gold);color:#94703f}}
+.copy-email:active{transform:scale(.96)}
+.copy-email.is-copied{background:var(--wine);border-color:var(--wine);color:#fff}
+.copy-email.is-copied svg:first-child{display:none}
+.copy-email.is-copied .copy-check{display:block}
+
+/* ---------- Touch devices (phones, tablets) ---------- */
+@media(pointer:coarse){
+  /* iOS zooms into any field below 16px on focus */
+  .field input,.field select,.field textarea{font-size:16px}
+  .map-legend button,.map-motion,.copy-email{min-height:44px}
+  /* Larger hit areas without changing the look */
+  .text-link,.privacy-link,.footer-contact a,.back-top,.header-cta{position:relative}
+  .text-link:before,.privacy-link:before,.footer-contact a:before,.back-top:before,.header-cta:before{content:'';position:absolute;inset:-13px -6px}
+}
+
+/* ---------- Tablet ---------- */
+@media(max-width:1190px) and (min-width:701px){
+  .client-logos{display:grid;grid-template-columns:repeat(6,1fr);gap:26px 18px;justify-items:center}
+  .client-more{grid-column:1/-1;flex-direction:row;align-items:center!important;gap:10px}
+  .client-more-text{max-width:none}
+}
+@media(max-width:860px) and (min-width:701px){
+  .client-logos{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:1020px){
+  .contact{grid-template-columns:1fr;gap:28px}
+  .office-description{font-size:13px}
+}
+@media(max-width:370px){
+  .hero-visual figcaption{flex-direction:column;align-items:flex-start;gap:2px}
+}
+
+@media(max-width:1190px){
+  .main-nav{gap:18px}
+  .main-nav>a{font-size:14px}
+  .clients{grid-template-columns:1fr;gap:16px;padding-bottom:56px}
+}
+@media(max-width:1020px){
+  .main-nav>a{font-size:16px}
+  .hero-photo{aspect-ratio:1/1.15}
+}
+@media(max-width:700px){
+  .hero .eyebrow{font-size:11px}
+  .hero-photo{aspect-ratio:1/1.08}
+  .hero-media{padding-left:13%}
+  .hero-card{width:38%;padding:5px 5px 8px;bottom:8%}
+  .hero-card span{font-size:11px;margin-top:6px;letter-spacing:.06em}
+  .hero-visual figcaption{margin-left:13%}
+  .hero-visual figcaption small{font-size:12px;max-width:none}
+  .hero-stats span{font-size:12px}
+  .clients{padding-block:0 44px}
+  .client-logos{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 14px;padding:20px 0}
+  .client-jaded-london{--logo-h:12px}
+  .client-nawa{--logo-h:18px}
+  .client-attrattivo{--logo-h:18px}
+  .client-adl{--logo-h:24px}
+  .client-ale{--logo-h:30px}
+  .client-logos img{max-width:100%;object-fit:contain}
+  .client-love-my-body{--logo-h:22px}
+  .client-more{grid-column:1/-1;flex-direction:row;align-items:center!important;justify-content:center;gap:10px}
+  .client-more-text{max-width:none}
+  .contact-link:before{inset:0 -8px}
+  .approach-panel .text-link{font-size:13px}
+  .contact-row{flex-wrap:wrap;gap:0 12px}
+  .contact-row .contact-email{flex:1 1 100%}
+  .copy-email{margin:2px 0 14px}
+  #worldMap{aspect-ratio:2}
+  .service-chips{margin:-10px 0 28px;gap:8px}
+  .service-chips li{font-size:12px;padding:7px 13px}
+  .contact-address{font-size:13px}
+  .privacy-inner{padding:26px 22px 22px}
+  .privacy-inner h3{font-size:21px}
+}
